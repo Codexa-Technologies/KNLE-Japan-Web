@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    @apply bg-white text-gray-900 antialiased;
+  }
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .btn-red {
+    @apply inline-flex items-center gap-2 bg-[#C8102E] text-white px-8 py-4 rounded-none font-semibold text-sm tracking-widest uppercase hover:bg-[#a00d24] transition-all duration-300;
+  }
+  .btn-outline-white {
+    @apply inline-flex items-center gap-2 border border-white text-white px-8 py-4 rounded-none font-semibold text-sm tracking-widest uppercase hover:bg-white hover:text-[#C8102E] transition-all duration-300;
+  }
+  .tag {
+    @apply inline-block text-xs font-semibold tracking-[0.2em] uppercase text-[#C8102E] mb-3;
+  }
+}
