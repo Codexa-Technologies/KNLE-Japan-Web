@@ -1,12 +1,12 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-stone overflow-hidden">
+    <section id="about" className="py-24 bg-stone overflow-hidden animate-on-scroll">
       <div className="max-w-7xl mx-auto px-6">
 
         <div className="grid lg:grid-cols-2 gap-0 items-stretch">
 
           {/* Image block */}
-          <div className="relative">
+          <div className="relative animate-on-scroll animate-slide-left">
             <div className="relative h-[500px] lg:h-full min-h-[500px]">
               <img
                 src="https://res.cloudinary.com/dcdt4tfgs/image/upload/v1775722462/AboutUS2_fp2png.jpg"
@@ -14,7 +14,7 @@ export default function About() {
                 className="absolute inset-0 w-full h-full object-cover"
               />
               {/* Overlay badge — overlaps onto image */}
-              <div className="absolute bottom-8 -right-6 lg:-right-10 bg-[#C8102E] text-white p-6 w-44 z-10 shadow-2xl rounded-xl flex flex-col items-center text-center">
+              <div className="absolute bottom-8 -right-6 lg:-right-10 bg-[#C8102E] text-white p-6 w-44 z-10 shadow-2xl rounded-xl flex flex-col items-center text-center animate-on-scroll animate-delay-2">
                 <p className="font-display text-4xl font-black leading-none mb-3">95%</p>
                 <p className="text-white/80 text-xs tracking-widest uppercase">Visa Success</p>
               </div>
@@ -23,7 +23,7 @@ export default function About() {
           </div>
 
           {/* Content block */}
-          <div className="bg-white px-8 lg:px-14 py-14 flex flex-col justify-center">
+          <div className="bg-white px-8 lg:px-14 py-14 flex flex-col justify-center animate-on-scroll animate-delay-1 animate-slide-right">
             <span className="tag">About K N L E</span>
             <h2 className="font-display text-4xl lg:text-5xl font-black text-ink leading-tight mb-6">
               We Don't Just Teach Japanese.<br />
@@ -55,7 +55,7 @@ export default function About() {
               ))}
             </div>
 
-            <div className="flex justify-end">
+            <div className="flex justify-end animate-on-scroll animate-delay-3">
               <a href="#contact" className="btn-red rounded-xl">
                 Get Free Consultation
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

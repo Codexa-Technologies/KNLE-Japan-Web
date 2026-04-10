@@ -1,13 +1,13 @@
 export default function Footer() {
   return (
-    <footer className="bg-[#0a0a0a] text-white">
+    <footer className="bg-[#0a0a0a] text-white animate-on-scroll">
 
       {/* Main footer */}
       <div className="max-w-7xl mx-auto px-6 py-16">
         <div className="grid md:grid-cols-12 gap-10">
 
           {/* Brand — wide column */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-5 animate-on-scroll">
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 overflow-hidden rounded-full bg-white">
                 <img
@@ -35,7 +35,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="md:col-span-3">
+          <div className="md:col-span-3 animate-on-scroll animate-delay-1">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-5">Quick Links</p>
             <ul className="space-y-3">
               {['Home', 'About Us', 'Services', 'Why Choose Us', 'Reviews', 'Contact'].map(l => (
@@ -50,7 +50,7 @@ export default function Footer() {
           </div>
 
           {/* Services */}
-          <div className="md:col-span-4">
+          <div className="md:col-span-4 animate-on-scroll animate-delay-2">
             <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-5">Our Services</p>
             <ul className="space-y-3">
               {[
@@ -126,10 +126,10 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-white/5">
         <div className="max-w-7xl mx-auto px-6 py-5 flex flex-col md:flex-row justify-between items-center gap-3">
-          <p className="text-gray-600 text-xs">
-            © {new Date().getFullYear()} KNL Japanese Language College. All rights reserved.
+          <p className="text-gray-400 text-xs">
+            © {new Date().getFullYear()} KNLE Japanese Language College. All rights reserved.
           </p>
-          <p className="text-gray-700 text-xs tracking-widest uppercase">
+          <p className="text-gray-500 text-xs tracking-widest uppercase">
             Sri Lanka → Japan
           </p>
         </div>

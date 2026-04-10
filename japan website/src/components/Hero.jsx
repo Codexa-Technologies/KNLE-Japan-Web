@@ -39,19 +39,19 @@ export default function Hero() {
           <div className="max-w-3xl">
 
             {/* Headline */}
-            <h1 className="font-display text-white leading-[1.05] mb-6">
+            <h1 className="font-display text-white leading-[1.05] mb-6 animate-on-load animate-delay-1">
               <span className="block text-5xl md:text-7xl lg:text-8xl font-black">Your Japan</span>
               <span className="block text-5xl md:text-7xl lg:text-8xl font-black text-[#C8102E]">Journey</span>
               <span className="block text-5xl md:text-7xl lg:text-8xl font-black">Starts Here.</span>
             </h1>
 
             {/* Sub */}
-            <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-xl mb-10">
+            <p className="text-white/70 text-lg md:text-xl font-light leading-relaxed max-w-xl mb-10 animate-on-load animate-delay-2">
               Expert Japanese Language Training & Student Visa Support helping Sri Lankan students successfully live, study, and build careers in Japan.
             </p>
 
             {/* CTAs */}
-            <div className="flex flex-wrap gap-4 mb-16">
+            <div className="flex flex-wrap gap-4 mb-16 animate-on-load animate-delay-3">
               <a href="#contact" className="btn-red rounded-full">
                 Apply Now
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -64,7 +64,7 @@ export default function Hero() {
             </div>
 
             {/* Stats */}
-            <div ref={counterRef} className="flex flex-wrap gap-10">
+            <div ref={counterRef} className="flex flex-wrap gap-10 animate-on-load animate-delay-4">
               {[
                 { count: 500, suffix: '+', label: 'Students Placed' },
                 { count: 95, suffix: '%', label: 'Visa Success Rate' },

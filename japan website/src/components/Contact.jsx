@@ -32,12 +32,12 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 bg-stone overflow-hidden scroll-mt-[120px]">
+    <section id="contact" className="py-24 bg-stone overflow-hidden scroll-mt-[120px] animate-on-scroll">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-0 items-stretch">
 
           {/* Left image block */}
-          <div className="relative">
+          <div className="relative animate-on-scroll animate-slide-left">
             <div className="relative h-[500px] lg:h-full min-h-[500px]">
               <img
                 src="https://res.cloudinary.com/dcdt4tfgs/image/upload/v1775794112/sophie-keen-iYjerlfwBhA-unsplash_h2yfug.jpg"
@@ -49,7 +49,7 @@ export default function Contact() {
           </div>
 
           {/* Right content block */}
-          <div className="bg-white px-8 lg:px-14 py-14 flex flex-col justify-center">
+          <div className="bg-white px-8 lg:px-14 py-14 flex flex-col justify-center animate-on-scroll animate-delay-1 animate-slide-right">
             <span className="tag">Contact Us</span>
             <h2 className="font-display text-4xl lg:text-5xl font-black text-ink leading-tight mb-6">
               Ready to start your<br />

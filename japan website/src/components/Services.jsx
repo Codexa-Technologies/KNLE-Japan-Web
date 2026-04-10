@@ -31,11 +31,11 @@ const services = [
 
 export default function Services() {
   return (
-    <section id="services" className="py-24 bg-[#f7f5f2]">
+    <section id="services" className="py-24 bg-[#f7f5f2] animate-on-scroll">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16 pb-10 border-b border-gray-200">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16 pb-10 border-b border-gray-200 animate-on-scroll">
           <div className="max-w-2xl">
             <span className="tag">What We Offer</span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-ink leading-tight">
@@ -43,7 +43,7 @@ export default function Services() {
               <span className="text-[#C8102E]">To Reach Japan.</span>
             </h2>
           </div>
-          <p className="text-gray-500 max-w-md text-sm leading-relaxed text-center">
+          <p className="text-gray-500 max-w-md text-sm leading-relaxed text-center animate-on-scroll animate-delay-1 animate-slide-right">
             Polite, modern support for every step of your Japan journey study, visa, documents, and work guidance.
           </p>
         </div>
@@ -53,7 +53,7 @@ export default function Services() {
           {services.map((service, index) => (
             <article
               key={service.num}
-              className="group rounded-[2rem] border border-white shadow-[0_20px_80px_rgba(0,0,0,0.08)] bg-white overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              className={`group rounded-[2rem] border border-white shadow-[0_20px_80px_rgba(0,0,0,0.08)] bg-white overflow-hidden transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-on-scroll ${index % 3 === 1 ? 'animate-delay-1' : index % 3 === 2 ? 'animate-delay-2' : ''}`}
             >
               <div className="relative overflow-hidden h-64 sm:h-72 lg:h-80">
                 <img

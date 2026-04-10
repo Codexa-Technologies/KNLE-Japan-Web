@@ -31,11 +31,11 @@ const reviews = [
 
 export default function Reviews() {
   return (
-    <section id="reviews" className="py-24 bg-[#f7f5f2]">
+    <section id="reviews" className="py-24 bg-[#f7f5f2] animate-on-scroll">
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-8 mb-16 animate-on-scroll">
           <div className="max-w-2xl">
             <span className="tag">Student Stories</span>
             <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-black text-ink leading-tight">
@@ -47,10 +47,10 @@ export default function Reviews() {
 
         {/* Review cards */}
         <div className="grid gap-6 lg:grid-cols-2">
-          {reviews.map((t) => (
+          {reviews.map((t, index) => (
             <article
               key={t.name}
-              className="group relative overflow-hidden rounded-[2rem] border border-gray-200 bg-white p-8 shadow-[0_20px_70px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+              className={`group relative overflow-hidden rounded-[2rem] border border-gray-200 bg-white p-8 shadow-[0_20px_70px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-on-scroll ${index % 2 === 1 ? 'animate-delay-1' : ''}`}
             >
               <div className="absolute -right-6 top-6 h-24 w-24 rounded-full bg-[#C8102E]/10 blur-3xl opacity-70" />
               <div className="relative z-10">

@@ -13,11 +13,11 @@ export default function Navbar() {
   }, [])
 
   return (
-    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled ? 'bg-white border-b border-gray-100 py-3' : 'bg-transparent py-6'}`}>
+    <header className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 animate-on-load ${scrolled ? 'bg-white border-b border-gray-100 py-3' : 'bg-transparent py-6'}`}>
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md border border-white/20 px-3 py-2 h-14 group">
+        <a href="#home" className="flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md border border-white/20 px-3 py-2 h-14 group animate-on-load animate-delay-1 animate-slide-left">
           <div className="w-10 h-10 overflow-hidden rounded-full bg-white">
             <img
               src="https://res.cloudinary.com/dcdt4tfgs/image/upload/v1775712110/WhatsApp_Image_2026-04-09_at_10.46.43-removebg-preview_qbsawu.png"
@@ -32,7 +32,7 @@ export default function Navbar() {
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8 rounded-full bg-white/15 backdrop-blur-md border border-white/20 px-5 py-2 h-14">
+        <nav className="hidden md:flex items-center gap-8 rounded-full bg-white/15 backdrop-blur-md border border-white/20 px-5 py-2 h-14 animate-on-load animate-delay-2">
           {links.map(l => (
             <a
               key={l}
@@ -48,7 +48,7 @@ export default function Navbar() {
         </nav>
 
         {/* Mobile toggle */}
-        <button onClick={() => setOpen(!open)} className={`md:hidden flex flex-col gap-1.5 p-1 ${scrolled ? 'text-ink' : 'text-white'}`}>
+        <button onClick={() => setOpen(!open)} className={`md:hidden flex flex-col gap-1.5 p-1 animate-on-load animate-delay-2 animate-slide-right ${scrolled ? 'text-ink' : 'text-white'}`}>
           <span className={`block w-6 h-px bg-current transition-all origin-center ${open ? 'rotate-45 translate-y-[7px]' : ''}`} />
           <span className={`block w-6 h-px bg-current transition-all ${open ? 'opacity-0 w-0' : ''}`} />
           <span className={`block w-6 h-px bg-current transition-all origin-center ${open ? '-rotate-45 -translate-y-[7px]' : ''}`} />
