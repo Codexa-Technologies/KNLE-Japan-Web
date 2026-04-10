@@ -13,17 +13,17 @@ export default function WhyChooseUs() {
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Header */}
-        <div className="grid lg:grid-cols-2 gap-12 items-end mb-16">
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
-            <span className="inline-block text-[#C8102E] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Why Choose KNL</span>
+            <span className="inline-block text-[#C8102E] text-xs font-semibold tracking-[0.3em] uppercase mb-4">Why Choose K N L E</span>
             <h2 className="font-display text-4xl lg:text-6xl font-black text-white leading-tight">
               Why Hundreds<br />
-              Choose <span className="text-[#C8102E]">KNL</span><br />
+              Choose <span className="text-[#C8102E]">KNLE</span><br />
               Over Others.
             </h2>
           </div>
-          <div className="lg:pb-2">
-            <p className="text-gray-400 text-lg leading-relaxed">
+          <div className="lg:pb-0 text-center">
+            <p className="text-gray-400 text-lg leading-relaxed text-center">
               There are many institutes. But only one that treats your Japan dream as seriously as you do.
             </p>
             <div className="mt-8 flex gap-8">
@@ -46,17 +46,22 @@ export default function WhyChooseUs() {
         </div>
 
         {/* Reasons grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-px bg-white/5">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {reasons.map((r) => (
-            <div key={r.num} className="bg-ink p-8 group hover:bg-[#C8102E]/5 transition-colors duration-300 border border-white/5">
-              <span className="font-display text-6xl font-black text-white/5 group-hover:text-[#C8102E]/20 transition-colors leading-none block mb-4">
+            <article
+              key={r.num}
+              className="group rounded-[2rem] border border-white/10 bg-[#111111] p-8 shadow-[0_20px_80px_rgba(0,0,0,0.18)] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+            >
+              <span className="font-display text-6xl font-black text-[#C8102E] leading-none block mb-4">
                 {r.num}
               </span>
-              <h3 className="font-display text-xl font-bold text-white mb-3 group-hover:text-[#C8102E] transition-colors">
+              <h3 className="font-display text-2xl md:text-3xl font-bold text-white mb-3 transition-colors duration-300 group-hover:text-[#C8102E]">
                 {r.title}
               </h3>
-              <p className="text-gray-500 text-sm leading-relaxed">{r.desc}</p>
-            </div>
+              <p className="text-gray-300 text-sm md:text-base leading-relaxed">
+                {r.desc}
+              </p>
+            </article>
           ))}
         </div>
 
@@ -65,7 +70,7 @@ export default function WhyChooseUs() {
           <p className="font-display text-2xl font-bold text-white">
             Ready to start your Japan journey?
           </p>
-          <a href="#contact" className="btn-red">
+          <a href="#contact" className="btn-red rounded-xl">
             Book Free Consultation
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />

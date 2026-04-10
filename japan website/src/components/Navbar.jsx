@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-const links = ['About', 'Services', 'Why Us', 'Testimonials', 'Contact']
+const links = ['About', 'Services', 'Why Us', 'Reviews', 'Contact']
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -17,28 +17,32 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
 
         {/* Logo */}
-        <a href="#home" className="flex items-center gap-3 group">
-          <div className={`w-9 h-9 flex items-center justify-center font-display font-black text-lg transition-colors ${scrolled ? 'bg-[#C8102E] text-white' : 'bg-white text-[#C8102E]'}`}>
-            K
+        <a href="#home" className="flex items-center gap-3 rounded-full bg-white/15 backdrop-blur-md border border-white/20 px-3 py-2 h-14 group">
+          <div className="w-10 h-10 overflow-hidden rounded-full bg-white">
+            <img
+              src="https://res.cloudinary.com/dcdt4tfgs/image/upload/v1775712110/WhatsApp_Image_2026-04-09_at_10.46.43-removebg-preview_qbsawu.png"
+              alt="KNLE logo"
+              className="w-full h-full object-cover"
+            />
           </div>
           <div>
-            <p className={`font-display font-bold text-base leading-none transition-colors ${scrolled ? 'text-ink' : 'text-white'}`}>KNL</p>
-            <p className={`text-[10px] tracking-[0.15em] uppercase leading-none mt-0.5 transition-colors ${scrolled ? 'text-gray-400' : 'text-white/60'}`}>Japanese College</p>
+            <p className={`font-display font-bold text-base leading-none transition-colors ${scrolled ? 'text-ink' : 'text-white'}`}>K N L E</p>
+            <p className={`text-[10px] tracking-[0.15em] uppercase leading-none mt-0.5 transition-colors ${scrolled ? 'text-gray-500' : 'text-white/70'}`}>Japanese College</p>
           </div>
         </a>
 
         {/* Desktop nav */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden md:flex items-center gap-8 rounded-full bg-white/15 backdrop-blur-md border border-white/20 px-5 py-2 h-14">
           {links.map(l => (
             <a
               key={l}
               href={`#${l.toLowerCase().replace(' ', '-')}`}
-              className={`text-xs font-semibold tracking-[0.15em] uppercase transition-colors hover:text-[#C8102E] ${scrolled ? 'text-gray-600' : 'text-white/80'}`}
+              className={`text-xs font-semibold tracking-[0.15em] uppercase transition-colors hover:text-[#C8102E] ${scrolled ? 'text-gray-900' : 'text-white'}`}
             >
               {l}
             </a>
           ))}
-          <a href="#contact" className={`text-xs font-semibold tracking-[0.15em] uppercase px-5 py-2.5 transition-all ${scrolled ? 'bg-[#C8102E] text-white hover:bg-[#a00d24]' : 'bg-white text-[#C8102E] hover:bg-white/90'}`}>
+          <a href="#contact" className={`text-xs font-semibold tracking-[0.15em] uppercase px-5 py-2.5 rounded-full transition-all ${scrolled ? 'bg-[#C8102E] text-white hover:bg-[#a00d24]' : 'bg-[#C8102E] text-white hover:bg-[#a00d24]'}`}>
             Apply Now
           </a>
         </nav>
@@ -61,7 +65,7 @@ export default function Navbar() {
               {l}
             </a>
           ))}
-          <a href="#contact" onClick={() => setOpen(false)} className="btn-red text-center justify-center mt-2">
+          <a href="#contact" onClick={() => setOpen(false)} className="rounded-full text-center justify-center mt-2 bg-[#C8102E] text-white px-5 py-3 hover:bg-[#a00d24] transition-colors">
             Apply Now
           </a>
         </div>
