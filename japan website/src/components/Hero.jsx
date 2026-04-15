@@ -1,6 +1,21 @@
 import { useEffect, useRef } from 'react'
 import Marquee from './Marquee'
 
+const sakuraPetals = [
+  { left: '4%', delay: '0s', duration: '13s', size: '16px' },
+  { left: '12%', delay: '2.1s', duration: '15s', size: '12px' },
+  { left: '20%', delay: '1.3s', duration: '14s', size: '18px' },
+  { left: '29%', delay: '3.4s', duration: '16s', size: '13px' },
+  { left: '38%', delay: '0.8s', duration: '12.8s', size: '15px' },
+  { left: '46%', delay: '2.8s', duration: '15.8s', size: '11px' },
+  { left: '55%', delay: '1.8s', duration: '13.6s', size: '17px' },
+  { left: '64%', delay: '4s', duration: '16.2s', size: '14px' },
+  { left: '73%', delay: '0.4s', duration: '12.5s', size: '12px' },
+  { left: '82%', delay: '2.4s', duration: '14.7s', size: '16px' },
+  { left: '90%', delay: '1.1s', duration: '15.4s', size: '13px' },
+  { left: '96%', delay: '3.2s', duration: '13.9s', size: '18px' },
+]
+
 export default function Hero() {
   const counterRef = useRef(null)
 
@@ -30,6 +45,32 @@ export default function Hero() {
         {/* Layered overlays for depth */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/50 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      </div>
+
+      {/* Sakura petals */}
+      <div className="absolute inset-0 z-[1] overflow-hidden pointer-events-none">
+        {sakuraPetals.map((petal, index) => (
+          <span
+            key={`${petal.left}-${index}`}
+            className="sakura-flower"
+            style={{
+              left: petal.left,
+              animationDelay: petal.delay,
+              animationDuration: petal.duration,
+              width: petal.size,
+              height: petal.size,
+            }}
+          >
+            <svg className="sakura-flower-svg" viewBox="0 0 100 100" aria-hidden="true">
+              <ellipse className="sakura-flower-petal" cx="50" cy="24" rx="14" ry="23" />
+              <ellipse className="sakura-flower-petal" cx="74" cy="41" rx="14" ry="23" transform="rotate(72 74 41)" />
+              <ellipse className="sakura-flower-petal" cx="65" cy="70" rx="14" ry="23" transform="rotate(144 65 70)" />
+              <ellipse className="sakura-flower-petal" cx="35" cy="70" rx="14" ry="23" transform="rotate(216 35 70)" />
+              <ellipse className="sakura-flower-petal" cx="26" cy="41" rx="14" ry="23" transform="rotate(288 26 41)" />
+              <circle className="sakura-flower-core" cx="50" cy="50" r="8" />
+            </svg>
+          </span>
+        ))}
       </div>
 
       
@@ -67,7 +108,7 @@ export default function Hero() {
             <div ref={counterRef} className="flex flex-wrap gap-10 animate-on-load animate-delay-4">
               {[
                 { count: 500, suffix: '+', label: 'Students Placed' },
-                { count: 95, suffix: '%', label: 'Visa Success Rate' },
+                { count: 100, suffix: '%', label: 'Visa Success Rate' },
                 { count: 5, suffix: '+', label: 'Years Experience' },
               ].map(s => (
                 <div key={s.label} className="text-center">

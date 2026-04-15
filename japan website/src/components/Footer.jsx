@@ -18,20 +18,46 @@ export default function Footer() {
               </div>
               <div>
                 <p className="font-display font-bold text-lg leading-none">K N L E</p>
-                <p className="text-gray-500 text-xs tracking-widest uppercase mt-0.5">Japanese College</p>
+                <p className="text-gray-500 text-xs tracking-widest uppercase mt-0.5">Japanese Language College</p>
               </div>
             </div>
             <p className="text-gray-500 text-sm leading-relaxed mb-6 max-w-sm">
               Sri Lanka's trusted institute for Japanese language education and student visa guidance. We've helped 500+ students build their lives in Japan.
             </p>
-            <a href="tel:+94740667457" className="inline-flex items-center gap-2 text-white font-semibold hover:text-[#C8102E] transition-colors">
-              <span className="flex h-9 w-9 items-center justify-center rounded-full bg-[#C8102E] text-white">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
-                </svg>
-              </span>
-              +94 74 066 7457
-            </a>
+            <div className="space-y-3 text-sm">
+              <div className="group flex w-full items-center gap-2 text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-gray-300 transition-all duration-300 group-hover:bg-[#C8102E] group-hover:text-white group-hover:scale-105">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                  </svg>
+                </span>
+                <a href="tel:+818042744455" className="text-inherit transition-colors duration-300 hover:text-inherit">
+                  +81 80-4274-4455
+                </a>
+                <span className="text-gray-500">/</span>
+                <a href="tel:+94740667457" className="text-inherit transition-colors duration-300 hover:text-inherit">
+                  +94 74 066 7457
+                </a>
+              </div>
+              <a href="mailto:knle.jp@gmail.com" className="group flex w-full items-center gap-2 text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-gray-300 transition-all duration-300 group-hover:bg-[#C8102E] group-hover:text-white group-hover:scale-105">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l9 6 9-6" />
+                    <rect x="3" y="6" width="18" height="12" rx="2" ry="2" strokeWidth="2" />
+                  </svg>
+                </span>
+                knle.jp@gmail.com
+              </a>
+              <p className="group flex w-full items-center gap-2 text-gray-300 transition-all duration-300 hover:text-white hover:translate-x-1">
+                <span className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-gray-300 transition-all duration-300 group-hover:bg-[#C8102E] group-hover:text-white group-hover:scale-105">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.828 0l-4.243-4.243a8 8 0 1111.314 0z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                  </svg>
+                </span>
+                <span>Negombo Road, Makandura (North Western Province)</span>
+              </p>
+            </div>
           </div>
 
           {/* Quick Links */}
@@ -70,7 +96,7 @@ export default function Footer() {
               <p className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-4">Follow Us</p>
               <div className="flex gap-3">
                 <a
-                  href="#"
+                  href="https://www.facebook.com/sunrayacadamy555"
                   target="_blank"
                   rel="noreferrer"
                   title="Facebook"
@@ -78,31 +104,6 @@ export default function Footer() {
                 >
                   <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                     <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.99h-2.54v-2.888h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.888h-2.33v6.99C18.343 21.128 22 16.99 22 12z" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  title="Instagram"
-                  className="w-9 h-9 border border-white/10 flex items-center justify-center text-gray-500 hover:border-[#C8102E] hover:text-[#C8102E] transition-all"
-                >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
-                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                    <line x1="17.5" y1="6.5" x2="17.5" y2="6.5" />
-                  </svg>
-                </a>
-                <a
-                  href="#"
-                  target="_blank"
-                  rel="noreferrer"
-                  title="YouTube"
-                  className="w-9 h-9 border border-white/10 flex items-center justify-center text-gray-500 hover:border-[#C8102E] hover:text-[#C8102E] transition-all"
-                >
-                  <svg className="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                    <path d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29.94 29.94 0 0 0 1 12a29.94 29.94 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.95-1.96A29.94 29.94 0 0 0 23 12a29.94 29.94 0 0 0-.46-5.58z" />
-                    <path d="M9.75 15.02V8.98l6.5 3.02-6.5 3.02z" fill="white" />
                   </svg>
                 </a>
                 <a

@@ -27,7 +27,7 @@ export default function Navbar() {
           </div>
           <div>
             <p className={`font-display font-bold text-base leading-none transition-colors ${scrolled ? 'text-ink' : 'text-white'}`}>K N L E</p>
-            <p className={`text-[10px] tracking-[0.15em] uppercase leading-none mt-0.5 transition-colors ${scrolled ? 'text-gray-500' : 'text-white/70'}`}>Japanese College</p>
+            <p className={`text-[10px] tracking-[0.15em] uppercase leading-none mt-0.5 transition-colors ${scrolled ? 'text-gray-500' : 'text-white/70'}`}>Japanese Language College</p>
           </div>
         </a>
 

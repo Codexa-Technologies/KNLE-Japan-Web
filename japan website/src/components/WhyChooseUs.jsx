@@ -33,7 +33,7 @@ export default function WhyChooseUs() {
               </div>
               <div className="w-px bg-white/10" />
               <div>
-                <p className="font-display text-5xl font-black text-white">95<span className="text-[#C8102E]">%</span></p>
+                <p className="font-display text-5xl font-black text-white">100<span className="text-[#C8102E]">%</span></p>
                 <p className="text-gray-500 text-xs tracking-widest uppercase mt-1">Visa Success</p>
               </div>
               <div className="w-px bg-white/10" />

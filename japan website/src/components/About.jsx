@@ -15,7 +15,7 @@ export default function About() {
               />
               {/* Overlay badge — overlaps onto image */}
               <div className="absolute bottom-8 -right-6 lg:-right-10 bg-[#C8102E] text-white p-6 w-44 z-10 shadow-2xl rounded-xl flex flex-col items-center text-center animate-on-scroll animate-delay-2">
-                <p className="font-display text-4xl font-black leading-none mb-3">95%</p>
+                <p className="font-display text-4xl font-black leading-none mb-3">100%</p>
                 <p className="text-white/80 text-xs tracking-widest uppercase">Visa Success</p>
               </div>
               

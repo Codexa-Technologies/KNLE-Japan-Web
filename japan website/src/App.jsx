@@ -1,7 +1,9 @@
 import { useEffect } from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
+import JourneyGallery from './components/JourneyGallery'
 import About from './components/About'
+import VisaEligibility from './components/VisaEligibility'
 import Services from './components/Services'
 import WhyChooseUs from './components/WhyChooseUs'
 import Reviews from './components/Reviews'
@@ -70,7 +72,9 @@ export default function App() {
     <div className="min-h-screen">
       <Navbar />
       <Hero />
+      <JourneyGallery />
       <About />
+      <VisaEligibility />
       <Services />
       <WhyChooseUs />
       <Reviews />
