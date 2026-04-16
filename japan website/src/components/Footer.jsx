@@ -11,7 +11,7 @@ export default function Footer() {
             <div className="flex items-center gap-3 mb-5">
               <div className="w-10 h-10 overflow-hidden rounded-full bg-white">
                 <img
-                  src="https://res.cloudinary.com/dcdt4tfgs/image/upload/v1775712110/WhatsApp_Image_2026-04-09_at_10.46.43-removebg-preview_qbsawu.png"
+                  src="https://res.cloudinary.com/dcdt4tfgs/image/upload/v1776331687/WhatsApp_Image_2026-04-16_at_14.53.00_yj3ikg.jpg"
                   alt="KNLE logo"
                   className="w-full h-full object-cover"
                 />
