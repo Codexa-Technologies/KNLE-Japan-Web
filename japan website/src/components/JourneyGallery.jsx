@@ -2,19 +2,19 @@ import { useEffect, useState } from 'react'
 
 const journeyImages = [
   {
-    src: '/journey/journey-01.jpg',
+    src: '',
     alt: 'KNLE team with students in Japan',
   },
   {
-    src: '/journey/journey-02.jpg',
+    src: 'https://res.cloudinary.com/dcdt4tfgs/image/upload/v1776333027/WhatsApp_Image_2026-04-16_at_14.53.04_iptrzt.jpg',
     alt: 'KNLE students celebration banner in Japan',
   },
   {
-    src: '/journey/journey-03.jpg',
+    src: 'https://res.cloudinary.com/dcdt4tfgs/image/upload/v1776332934/WhatsApp_Image_2026-04-16_at_14.53.05_wcthnd.jpg',
     alt: 'KNLE group photo at Fukuoka airport',
   },
   {
-    src: '/journey/journey-04.jpg',
+    src: 'https://res.cloudinary.com/dcdt4tfgs/image/upload/v1776332939/WhatsApp_Image_2026-04-16_at_14.53.04_z22bcl.jpg',
     alt: 'KNLE welcome and arrival moment in Japan',
   },
 ]
