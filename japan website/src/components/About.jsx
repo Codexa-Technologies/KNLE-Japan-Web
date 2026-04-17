@@ -1,8 +1,7 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 bg-stone overflow-hidden animate-on-scroll">
+    <section id="about" className="py-24 bg-stone overflow-hidden animate-on-scroll relative">
       <div className="max-w-7xl mx-auto px-6">
-
         <div className="grid lg:grid-cols-2 gap-0 items-stretch">
 
           {/* Image block */}
@@ -13,12 +12,10 @@ export default function About() {
                 alt="About KNL"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-              {/* Overlay badge — overlaps onto image */}
               <div className="absolute bottom-8 -right-6 lg:-right-10 bg-[#C8102E] text-white p-6 w-44 z-10 shadow-2xl rounded-xl flex flex-col items-center text-center animate-on-scroll animate-delay-2">
                 <p className="font-display text-4xl font-black leading-none mb-3">100%</p>
                 <p className="text-white/80 text-xs tracking-widest uppercase">Visa Success</p>
               </div>
-              
             </div>
           </div>
 
@@ -36,7 +33,6 @@ export default function About() {
               Our instructors have lived and studied in Japan. Our visa team knows every document, every requirement, every deadline. We've helped over 500 students make Japan their home.
             </p>
 
-            {/* Feature list */}
             <div className="space-y-3 mb-10">
               {[
                 'JLPT certified training from N5 to N2',
@@ -64,8 +60,8 @@ export default function About() {
               </a>
             </div>
           </div>
-        </div>
 
+        </div>
       </div>
     </section>
   )

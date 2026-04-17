@@ -29,20 +29,7 @@ function ContactButtons() {
           </svg>
         </div>
       </a>
-      <a
-        href="mailto:knle.jp@gmail.com"
-        title="Send an email"
-        className="group flex items-center gap-3"
-      >
-        <span className="hidden group-hover:block bg-ink text-white text-xs font-semibold px-3 py-2 whitespace-nowrap shadow-xl">
-          Email us
-        </span>
-        <div className="w-14 h-14 rounded-full bg-[#ea4335] flex items-center justify-center shadow-2xl hover:bg-[#d63b2f] transition-colors">
-          <svg className="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-            <path d="M4.5 5.5h15a2 2 0 012 2v9a2 2 0 01-2 2h-15a2 2 0 01-2-2v-9a2 2 0 012-2zm0 2.08V7.5l7.5 4.92L19.5 7.5v.08L12 12.83 4.5 7.58zm0 1.97V16.5h15V9.55l-7.5 4.92-7.5-4.92z"/>
-          </svg>
-        </div>
-      </a>
+      
     </div>
   )
 }

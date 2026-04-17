@@ -1,4 +1,5 @@
-import { useState } from 'react'
+import { useState, useRef } from 'react'
+import emailjs from '@emailjs/browser'
 
 const services = [
   'Japanese Language Classes',
@@ -11,7 +12,9 @@ const services = [
 export default function Contact() {
   const [form, setForm] = useState({ name: '', phone: '', service: '', message: '' })
   const [sent, setSent] = useState(false)
+  const [sending, setSending] = useState(false)
   const [error, setError] = useState('')
+  const formRef = useRef(null)
 
   const validate = () => {
     if (!form.name.trim() || !form.phone.trim() || !form.service.trim()) {
@@ -25,7 +28,7 @@ export default function Contact() {
   const handleWhatsApp = (e) => {
     e.preventDefault()
     if (!validate()) return
-    const message = `📩 New Appointment - KNL Website\n\n👤 Full Name: ${form.name}\n📞 Phone: ${form.phone}\n🎯 Service: ${form.service}\n\n💬 Message:\n${form.message || 'N/A'}`
+    const message = `📩 New Appointment - KNL Website\n\n Full Name: ${form.name}\n Phone: ${form.phone}\n Service: ${form.service}\n\n Message:\n${form.message || 'N/A'}`
     window.open(`https://wa.me/94740667457?text=${encodeURIComponent(message)}`, '_blank')
     setForm({ name: '', phone: '', service: '', message: '' })
     setError('')
@@ -33,16 +36,31 @@ export default function Contact() {
     setTimeout(() => setSent(false), 5000)
   }
 
-  const handleEmail = (e) => {
+  const handleEmail = async (e) => {
     e.preventDefault()
     if (!validate()) return
-    const subject = `New Appointment Request - ${form.service}`
-    const body = `New Appointment - KNL Website\n\nFull Name: ${form.name}\nPhone: ${form.phone}\nService: ${form.service}\n\nMessage:\n${form.message || 'N/A'}`
-    window.open(`mailto:knle.jp@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, '_blank')
-    setForm({ name: '', phone: '', service: '', message: '' })
+    setSending(true)
     setError('')
-    setSent(true)
-    setTimeout(() => setSent(false), 5000)
+    try {
+      await emailjs.send(
+        'YOUR_SERVICE_ID',      
+        'YOUR_TEMPLATE_ID',     
+        {
+          from_name: form.name,
+          phone: form.phone,
+          service: form.service,
+          message: form.message || 'N/A',
+        },
+        'ZqCyiG0JlbBELnXre'       // 🔁 Replace with your EmailJS Public Key
+      )
+      setForm({ name: '', phone: '', service: '', message: '' })
+      setSent(true)
+      setTimeout(() => setSent(false), 5000)
+    } catch (err) {
+      setError('Failed to send email. Please try WhatsApp or try again later.')
+    } finally {
+      setSending(false)
+    }
   }
 
   const handleSubmit = (e) => {
@@ -148,12 +166,13 @@ export default function Contact() {
                 <button
                   type="button"
                   onClick={handleEmail}
-                  className="inline-flex items-center justify-center gap-2 rounded-[1.5rem] border-2 border-[#C8102E] px-4 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-[#C8102E] transition hover:bg-[#C8102E] hover:text-white"
+                  disabled={sending}
+                  className="inline-flex items-center justify-center gap-2 rounded-[1.5rem] border-2 border-[#C8102E] px-4 py-4 text-sm font-semibold uppercase tracking-[0.15em] text-[#C8102E] transition hover:bg-[#C8102E] hover:text-white disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
-                  Email
+                  {sending ? 'Sending…' : 'Email'}
                 </button>
               </div>
 

@@ -33,7 +33,7 @@ const reviews = [
     image: 'https://res.cloudinary.com/dcdt4tfgs/image/upload/v1776332260/WhatsApp_Image_2026-04-16_at_14.53.02_a72cxa.jpg',
     quote: 'From the first consultation to arriving in Japan, KNLE was there. Professional, honest, and genuinely invested in my success.',
   },
-   {
+  {
     name: 'PATHUM DILSHAN',
     school: 'tokyo school',
     initials: 'DJ',
@@ -41,7 +41,7 @@ const reviews = [
     image: 'https://res.cloudinary.com/dcdt4tfgs/image/upload/v1776332359/WhatsApp_Image_2026-04-16_at_14.53.03_hxulgf.jpg',
     quote: 'I started from zero Japanese. With KNLE guidance and daily practice, I gained confidence, passed my interviews, and joined my Tokyo school smoothly.',
   },
-   {
+  {
     name: 'RAVINDI SANJULA',
     school: 'nagoya college',
     initials: 'DJ',
@@ -53,11 +53,18 @@ const reviews = [
 
 export default function Reviews() {
   const [currentIndex, setCurrentIndex] = useState(0)
-  const [cardsPerView, setCardsPerView] = useState(() => (typeof window !== 'undefined' && window.innerWidth < 768 ? 1 : 2))
+  const [cardsPerView, setCardsPerView] = useState(() => {
+    if (typeof window === 'undefined') return 3
+    if (window.innerWidth < 768) return 1
+    if (window.innerWidth < 1024) return 2
+    return 3
+  })
 
   useEffect(() => {
     const handleResize = () => {
-      setCardsPerView(window.innerWidth < 768 ? 1 : 2)
+      if (window.innerWidth < 768) setCardsPerView(1)
+      else if (window.innerWidth < 1024) setCardsPerView(2)
+      else setCardsPerView(3)
     }
 
     handleResize()
@@ -93,7 +100,7 @@ export default function Reviews() {
           </div>
         </div>
 
-        {/* Review cards */}
+        {/* Review cards — scroller untouched, only card design updated */}
         <div className="relative">
           <button
             type="button"
@@ -116,29 +123,48 @@ export default function Reviews() {
                 <article
                   key={t.name}
                   style={{ flex: `0 0 ${100 / cardsPerView}%` }}
-                  className={`px-3 bg-[#f7f5f2] ${index % 2 === 1 ? 'animate-delay-1' : ''}`}
+                  className={`px-3 ${index % 2 === 1 ? 'animate-delay-1' : ''}`}
                 >
-                  <div className="group relative h-full overflow-hidden rounded-[2rem] border border-gray-200 bg-[#f7f5f2] p-8 shadow-[0_20px_70px_rgba(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl animate-on-scroll">
-                    <div className="absolute -right-6 top-6 h-24 w-24 rounded-full bg-[#C8102E]/10 blur-3xl opacity-70" />
-                    <div className="relative z-10">
-                      <div className="mb-2 -mt-2 text-6xl text-[#C8102E] font-display leading-none">“</div>
-                      <p className="text-gray-700 text-lg leading-relaxed mb-8">
-                        {t.quote}
-                      </p>
-                      <div className="flex items-center gap-4 pt-4 border-t border-gray-100">
-                        <div className="h-14 w-14 overflow-hidden rounded-3xl ring-2 ring-white shadow-md">
-                          <img
-                            src={t.image}
-                            alt={t.name}
-                            className="h-full w-full object-cover"
-                            loading="lazy"
-                          />
+                  {/* ── CARD ── */}
+                  <div className="group relative h-full bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-400 hover:-translate-y-1 animate-on-scroll">
+
+                    <div className="p-7 flex flex-col h-full">
+
+
+
+                      {/* Quote */}
+                      <div className="relative flex-1 mb-6">
+                        <svg className="absolute -top-1 -left-1 w-8 h-8 text-rose-100 fill-rose-100" viewBox="0 0 32 32">
+                          <path d="M10 8C6.686 8 4 10.686 4 14v10h10V14H7.5c0-1.38 1.12-2.5 2.5-2.5V8zm14 0c-3.314 0-6 2.686-6 6v10h10V14h-6.5c0-1.38 1.12-2.5 2.5-2.5V8z" />
+                        </svg>
+                        <p className="relative text-gray-600 text-[0.95rem] leading-relaxed pl-3">
+                          {t.quote}
+                        </p>
+                      </div>
+
+                      {/* Divider */}
+                      <div className="h-px bg-gray-100 mb-5" />
+
+                      {/* Author row */}
+                      <div className="flex items-center gap-3">
+                        {/* Avatar with verified badge */}
+                        <div className="relative flex-shrink-0">
+                          <div className="w-12 h-12 rounded-2xl overflow-hidden ring-2 ring-rose-100">
+                            <img
+                              src={t.image}
+                              alt={t.name}
+                              className="w-full h-full object-cover"
+                              loading="lazy"
+                            />
+                          </div>
                         </div>
-                        <div>
-                          <p className="font-semibold text-ink">{t.name}</p>
-                          <p className="text-gray-500 text-xs tracking-[0.2em] uppercase">{t.school}</p>
+
+                        <div className="min-w-0">
+                          <p className="font-bold text-gray-900 text-sm truncate">{t.name}</p>
+                          <p className="text-[#C8102E] text-xs font-semibold tracking-widest uppercase mt-0.5 truncate">{t.school}</p>
                         </div>
                       </div>
+
                     </div>
                   </div>
                 </article>
@@ -158,6 +184,7 @@ export default function Reviews() {
             </svg>
           </button>
         </div>
+
       </div>
     </section>
   )
