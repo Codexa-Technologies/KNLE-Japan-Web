@@ -11,7 +11,7 @@ const services = [
     title: 'Student Visa Processing',
     desc: 'Complete student visa management from document checks to submission, so you can move to Japan with confidence.',
     img: 'https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=900&q=80',
-    tags: ['95% Success Rate', 'Fast Processing', 'Expert Guidance'],
+    tags: ['100% Success Rate', 'Fast Processing', 'Expert Guidance'],
   },
   {
     num: '03',

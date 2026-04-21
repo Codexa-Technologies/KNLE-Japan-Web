@@ -8,7 +8,7 @@ export default function About() {
           <div className="relative animate-on-scroll animate-slide-left">
             <div className="relative h-[500px] lg:h-full min-h-[500px]">
               <img
-                src="https://res.cloudinary.com/dcdt4tfgs/image/upload/v1775722462/AboutUS2_fp2png.jpg"
+                src="https://res.cloudinary.com/dcdt4tfgs/image/upload/v1775794245/wei-AeYjrcT5Jhc-unsplash_kk8eqj.jpg"
                 alt="About KNL"
                 className="absolute inset-0 w-full h-full object-cover"
               />

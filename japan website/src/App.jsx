@@ -4,6 +4,7 @@ import Hero from './components/Hero'
 import JourneyGallery from './components/JourneyGallery'
 import About from './components/About'
 import VisaEligibility from './components/VisaEligibility'
+import StudentIntakes from './components/StudentIntakes'
 import Services from './components/Services'
 import WhyChooseUs from './components/WhyChooseUs'
 import Reviews from './components/Reviews'
@@ -78,6 +79,7 @@ export default function App() {
       <JourneyGallery />
       <About />
       <VisaEligibility />
+      <StudentIntakes />
       <Services />
       <WhyChooseUs />
       <Reviews />
