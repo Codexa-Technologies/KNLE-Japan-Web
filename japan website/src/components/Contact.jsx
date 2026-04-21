@@ -27,7 +27,7 @@ export default function Contact() {
     e.preventDefault()
     if (!validate()) return
     const message = `New Appointment - KNLE Website\n\n Full Name: ${form.name}\n Phone: ${form.phone}\n Service: ${form.service}\n\n Message:\n${form.message || 'N/A'}`
-    window.open(`https://wa.me/94750326062?text=${encodeURIComponent(message)}`, '_blank')
+    window.open(`https://wa.me/94740667457?text=${encodeURIComponent(message)}`, '_blank')
     setForm({ name: '', phone: '', service: '', message: '' })
     setError('')
     setSent(true)
