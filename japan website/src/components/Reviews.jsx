@@ -7,7 +7,7 @@ const reviews = [
     initials: 'KP',
     color: '#C8102E',
     image: 'https://res.cloudinary.com/dcdt4tfgs/image/upload/v1776332049/WhatsApp_Image_2026-04-16_at_14.53.01_wdldrz.jpg',
-    quote: 'KNLE didn’t just teach me Japanese — they handled everything, from visa and documents to my Kitakyushu placement. After studies, I moved to Tokyo with zero stress.',
+    quote: 'KNLE didn’t just teach me Japanese — they handled everything, from visa and documents to my Kitakyushu (Fukuoka) placement. After studies, I moved to Japan with zero stress.',
   },
   {
     name: 'CHATHUNI DEWMINI',
